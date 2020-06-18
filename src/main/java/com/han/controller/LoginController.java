@@ -27,7 +27,7 @@ public class LoginController {
     public String login(@RequestParam("username")String username,
                         @RequestParam("pwd")String pwd, Map msgMap, HttpServletRequest request)
     {
-        if(username.equals("tom"))
+        if(username.equals("toms"))
         {
             System.out.println("login");
             request.getSession().setAttribute("myuser",username);
