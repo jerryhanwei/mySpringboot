@@ -1,7 +1,9 @@
 package com.han.dao;
 
 import com.han.model.TFilm;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TFilmMapper {
     int deleteByPrimaryKey(Short filmId);
 
