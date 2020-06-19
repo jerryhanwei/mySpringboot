@@ -5,7 +5,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistration
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-@Configuration
+//@Configuration
 public class MyWebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -17,7 +17,8 @@ public class MyWebConfig implements WebMvcConfigurer {
                 "/**/*.js",              //js静态资源
                 "/**/*.css",             //css静态资源
                 "/",
-                "/getLoginInfo"
+                "/getLoginInfo",
+                "getOneFilm"
         );
     }
 

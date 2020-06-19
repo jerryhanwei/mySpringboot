@@ -5,7 +5,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-@MapperScan(basePackages = "com.han")
+
 class TesthanApplicationTests {
 
     @Test
