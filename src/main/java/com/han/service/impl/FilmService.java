@@ -1,6 +1,8 @@
 package com.han.service.impl;
 
+import com.han.dao.TAgencyMapper;
 import com.han.dao.TFilmMapper;
+import com.han.model.TAgency;
 import com.han.model.TFilm;
 import com.han.service.IFilmService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +14,15 @@ import javax.annotation.Resource;
 public class FilmService implements IFilmService {
     @Autowired
     private TFilmMapper filmMapper;
-
+    @Autowired
+    private TAgencyMapper agencyMapper;
     @Override
     public TFilm selectByPrimaryKey(String filmId) {
        return filmMapper.selectByPrimaryKey(Short.valueOf(filmId));
+    }
+
+    @Override
+    public TAgency selectOneAgency(String agencyID) {
+        return agencyMapper.selectByPrimaryKey(agencyID);
     }
 }

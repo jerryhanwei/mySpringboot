@@ -4,7 +4,9 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <classPathEntry location="C:\Users\wayne\Documents\software\Java\mavenRepo\mysql\mysql-connector-java\8.0.11\mysql-connector-java-8.0.11.jar" />
+<!--    <classPathEntry location="C:\Users\wayne\Documents\software\Java\mavenRepo\mysql\mysql-connector-java\8.0.11\mysql-connector-java-8.0.11.jar" />-->
+
+    <classPathEntry location="/Volumes/myfile/java/MyMavenRepository/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar" />
 
     <context id="DB2Tables" targetRuntime="MyBatis3">
         <commentGenerator>
@@ -13,7 +15,8 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://127.0.0.1:3306/sakila?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=GMT" userId="root" password="root">
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/shop_store?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=GMT" userId="root" password="wayne123456">
+<!--                        connectionURL="jdbc:mysql://127.0.0.1:3306/sakila?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=GMT" userId="root" password="root">-->
         </jdbcConnection>
 
         <javaTypeResolver >
@@ -32,7 +35,7 @@
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
-        <table tableName="film" domainObjectName="TFilm"
+        <table tableName="t_agency" domainObjectName="TAgency"
                enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"
         >
         </table>
