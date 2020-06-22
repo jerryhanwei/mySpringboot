@@ -19,10 +19,10 @@ public class FilmController {
 
 
     @RequestMapping("getOneFilm")
-    public String findOneFilm()
+    public String findOneFilm(TAgency tagency)
     {
        //TFilm film = filmService.selectByPrimaryKey("1");
-        TAgency agency = filmService.selectOneAgency("210780da-e012-4d87-a9ca-43ff90f26c5d");
+        TAgency agency = filmService.selectOneAgency(tagency.gettAgencyId());
         System.out.println(agency.gettAgencyName());
         return "account";
     }

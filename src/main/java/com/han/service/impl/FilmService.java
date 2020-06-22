@@ -6,6 +6,7 @@ import com.han.model.TAgency;
 import com.han.model.TFilm;
 import com.han.service.IFilmService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -20,6 +21,7 @@ public class FilmService implements IFilmService {
     public TFilm selectByPrimaryKey(String filmId) {
        return filmMapper.selectByPrimaryKey(Short.valueOf(filmId));
     }
+
 
     @Override
     public TAgency selectOneAgency(String agencyID) {
