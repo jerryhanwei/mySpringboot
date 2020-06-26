@@ -9,4 +9,6 @@ public interface IFilmService {
 
     TAgency selectOneAgency(String agencyID);
 
+    TAgency updateAgency(TAgency agency);
+
 }

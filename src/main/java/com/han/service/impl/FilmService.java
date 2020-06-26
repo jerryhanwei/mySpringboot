@@ -6,6 +6,7 @@ import com.han.model.TAgency;
 import com.han.model.TFilm;
 import com.han.service.IFilmService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
@@ -22,9 +23,18 @@ public class FilmService implements IFilmService {
        return filmMapper.selectByPrimaryKey(Short.valueOf(filmId));
     }
 
-
+    @Cacheable(value = "agencyCathe",keyGenerator = "myKeyGenerator")
     @Override
     public TAgency selectOneAgency(String agencyID) {
         return agencyMapper.selectByPrimaryKey(agencyID);
     }
+
+    @CachePut(value = "agencyCathe",keyGenerator = "myKeyGenerator")
+    @Override
+    public TAgency updateAgency(TAgency agency) {
+         agencyMapper.updateByPrimaryKey(agency);
+         return agency;
+    }
+
+
 }
